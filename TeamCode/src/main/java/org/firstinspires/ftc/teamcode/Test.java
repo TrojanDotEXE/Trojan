@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-public class Test {
+public class Test {//bine
     //salut
     //cefaci
     //test
