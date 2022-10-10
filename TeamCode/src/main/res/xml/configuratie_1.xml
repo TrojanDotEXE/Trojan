@@ -2,10 +2,8 @@
 <Robot type="FirstInspires-FTC">
     <LynxUsbDevice name="Control Hub Portal" serialNumber="(embedded)" parentModuleAddress="173">
         <LynxModule name="Control Hub" port="173">
-            <NeveRest40Gearmotor name="frontLeft" port="0" />
-            <NeveRest40Gearmotor name="backLeft" port="1" />
-            <NeveRest40Gearmotor name="frontRight" port="2" />
-            <NeveRest40Gearmotor name="backRight" port="3" />
+            <NeveRest40Gearmotor name="leftRear" port="0" />
+            <NeveRest40Gearmotor name="rightRear" port="1" />
             <LynxEmbeddedIMU name="imu" port="0" bus="0" />
         </LynxModule>
     </LynxUsbDevice>

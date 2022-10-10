@@ -3,8 +3,6 @@ package org.firstinspires.ftc.teamcode.TeleOpLuca;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.Servo;
 import com.qualcomm.robotcore.util.Range;
 
 import org.firstinspires.ftc.teamcode.robot.Robot;
@@ -32,10 +30,8 @@ public class TeleOpLuca extends OpMode {
         leftPower    = Range.clip(drive + turn, -1.0, 1.0) ;
         rightPower   = Range.clip(drive - turn, -1.0, 1.0) ;
 
-        robot.rightRear.setPower(rightPower);
-        robot.rightFront.setPower(rightPower);
-        robot.leftFront.setPower(leftPower);
-        robot.leftFront.setPower(leftPower);
+        robot.right.setPower(rightPower);
+        robot.left.setPower(leftPower);
 
        if(gamepad2.a){
 
