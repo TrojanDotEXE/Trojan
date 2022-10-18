@@ -17,6 +17,9 @@ public class TeleOpLuca extends OpMode {
 
         robot.initialize();
 
+
+        telemetry.addData("Status: ","initializat");
+
     }
 
     @Override
@@ -29,6 +32,9 @@ public class TeleOpLuca extends OpMode {
         double turn  =  gamepad1.right_stick_x;
         leftPower    = Range.clip(drive + turn, -1.0, 1.0) ;
         rightPower   = Range.clip(drive - turn, -1.0, 1.0) ;
+
+        telemetry.addData("Putere totala motoare: ","%f",leftPower+rightPower);
+        telemetry.addData("Putere motor stanga / dreapta: ","%f / %f",leftPower, rightPower);
 
         robot.right.setPower(rightPower);
         robot.left.setPower(leftPower);
