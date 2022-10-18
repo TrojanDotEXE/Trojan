@@ -46,6 +46,9 @@ public class TeleOpLuca extends OpMode {
        else{
 
            robot.claw.setPosition(1);
+
        }
+
+       telemetry.update();
     }
 }
