@@ -6,24 +6,32 @@ import com.qualcomm.robotcore.hardware.Servo;
 
 public class Robot extends LinearOpMode {
 
-    public DcMotor right, left;
+    public DcMotor rightF, leftF, rightB, leftB;
 
     public Servo claw ;
 
     public void initialize(){
 
-        left = hardwareMap.get (DcMotor.class, "leftRear");
-        right = hardwareMap.get (DcMotor.class, "rightRear");
+        leftF = hardwareMap.get (DcMotor.class, "leftFront");
+        rightF = hardwareMap.get (DcMotor.class, "rightFront");
+        rightB = hardwareMap.get (DcMotor.class, "rightRear");
+        leftB = hardwareMap.get (DcMotor.class, "rightRear");
         claw = hardwareMap.get (Servo.class, "claw");
 
-        left.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        right.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        leftF.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        rightF.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        rightB.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        leftB.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
-        left.setDirection(DcMotorSimple.Direction.FORWARD);
-        right.setDirection(DcMotorSimple.Direction.REVERSE);
+        leftF.setDirection(DcMotorSimple.Direction.FORWARD);
+        rightF.setDirection(DcMotorSimple.Direction.REVERSE);
+        leftB.setDirection(DcMotorSimple.Direction.FORWARD);
+        rightB.setDirection(DcMotorSimple.Direction.REVERSE);
 
-        left.setPower(0);
-        right.setPower(0);
+        leftF.setPower(0);
+        rightF.setPower(0);
+        leftB.setPower(0);
+        rightB.setPower(0);
 
 
     }
